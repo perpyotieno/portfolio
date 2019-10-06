@@ -245,7 +245,7 @@
                                     <div class="hover_text">
                 
                                         <h2>Javascript</h2>
-                                        <p>Use in frontend and backend of web applications. Make my applications interactive</p>
+                                        <p>Use in frontend and backend to make my applications interactive</p>
                                         
                                     </div>
                                 </div>
@@ -442,38 +442,44 @@
                 <div class="col-lg-7">
                     <div class="regervation_part_iner">
                             <p>Get in touch or send me an email at <strong>perpetuamary6630@gmail.com </strong>or <strong>perpetuamary@yahoo.com</strong></p> <br>
-                        <form>
+                        <form action="https://formspree.io/mdqaplgx" method="POST" id="contact_form">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Name *">
+                                    <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="Name *">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" id="inputPassword4"
+                                    <input type="email" name="_replyto" class="form-control" id="inputPassword4"
                                         placeholder="Email address *">
                                 </div> 
                                 <div class="form-group col-md-6">
-                                        <input type="number" class="form-control" id="pnone" placeholder="Phone number *">
+                                        <input type="number" name="number" class="form-control" id="pnone" placeholder="Phone number *">
                                     </div>
                                    
                                 <div class="form-group col-md-6">
                                     <select class="form-control" id="Select">
                                         <option value="1" selected>Select service*</option>
-                                        <option value="2"></option>
-                                        <option value="3">Inquiries</option>
-                                        <option value="4">Schedule a meeting</option>
+                                        <option value="2">Inquiries</option>
+                                        <option value="3">Schedule a meeting</option>
                                     </select>
                                 </div>
                                
                                 <div class="form-group col-md-12">
-                                    <textarea class="form-control" id="Textarea" rows="4"
-                                        placeholder="Your Note *"></textarea>
+                                    <textarea class="form-control" name="message" id="Textarea" rows="4"
+                                        placeholder="Your Message *"></textarea>
                                 </div>
+                                <!-- <input type="hidden" name="_next" value="//mywebsite.com/thanks.html" /> -->
+                                <input type="hidden" name="_subject" value="Website contact" />
+                                <input type="text" name="_gotcha" style="display:none" />
+                               
                             </div>
 
 
                             <div class="regerv_btn">
-                                <a href="#" class="regerv_btn_iner">Send a message</a>
+                                
+                                <a href="#contact_form" type= "submit" class="regerv_btn_iner" onclick="submit()" >Send a message</a>
                             </div>
+
+                            
                         </form>
                     </div>
                 </div>
@@ -488,7 +494,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_tittle">
-                        <img src="img/section_tittle_icon.png" alt="icon">
+                    
                         <h2>My Inspiration</h2>
                         <p>"Every great developer you know got there by solving problems they were unqualified to solve until they actually did it." - Patrick McKenzie</p>
                     </div>
@@ -551,6 +557,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- footer part end-->
 
     <!-- jquery plugins here-->
+    <script>
+            function submit() {
+              /*Put all the data posting code here*/
+             document.getElementById("contact_form").reset();
+             jQuery(document).ready(function($){
+alert("Thank you for reaching out! I will get back to you as soon as possible.");
+});
+            }
+            </script>
+             
 
     <script src="js/jquery-1.12.1.min.js"></script>
     <!-- popper js -->
